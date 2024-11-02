@@ -1,4 +1,4 @@
-async function initialisedb(file,db) {
+export async function initialisedb(file,db) {
     const response = await fetch(file);
     const jsonData = await response.json();
     const initialData = jsonData.map(stock => ({
@@ -17,7 +17,7 @@ async function initialisedb(file,db) {
 };
 
 
-async function updateAllStock(db) {
+export async function updateAllStock(db) {
     try {
         // Step 1: Fetch all stock items from the database
         const allDocs = await db.allDocs({ include_docs: true });

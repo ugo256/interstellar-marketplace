@@ -20,6 +20,16 @@ function App() {
   const loadStocks = () => {
       fetchStocks().then(stocks => setStocks(stock));
   };
+
+  const handleAdd = () => {
+    if (!ticker || !price) return; // Basic validation
+
+      addPerson(ticker, parseFloat(price)).then(() => {
+          setName('');
+          setAge('');
+          loadPeople(); // Reload data
+      });
+  };
   
   const assets = assetsData;
   
@@ -28,6 +38,21 @@ function App() {
     <div style={styles.container}>
       <Sidebar assets={assets} />
     </div>
+    <input 
+      type="text"
+      placeholder="Name"
+      value={name}
+      onChange={e => setName(e.target.value)}
+    />
+    <input
+      type="number"
+      placeholder="Age"
+      value={age}
+      onChange={e => setAge(e.target.value)}
+    />
+    <button onClick={selectedId ? handleUpdate : handleAdd}>
+      {selectedId ? 'Update Person' : 'Add Person'}
+    </button>
     <div>
     {stocks.map(stock => (
       <li key={stock._id}>

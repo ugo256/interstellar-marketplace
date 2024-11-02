@@ -1,4 +1,4 @@
-import PouchDB from 'pouchdb'
+import PouchDB from './pouchdb'
 
 // Create a database named Stocks
 const db_s = new PouchDB('stocks');

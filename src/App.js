@@ -31,7 +31,7 @@ function App() {
       <li key={stock._id}>
       <strong>{stock.name}</strong> (Price: {stock.price})
       </li>
-      )}
+      ))}
     </div>
     </div>
     </div>);

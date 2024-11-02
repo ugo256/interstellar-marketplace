@@ -5,7 +5,6 @@ import planetData from './components/planets.json';
 import './App.css';
 import {fetchStocks} from './components/stock_pouchdb.js';
 import {fetchCurrencies} from './components/currency_pouchdb.js';
-import { initialisedb } from './components/databases.js';
 
 function App() {
   

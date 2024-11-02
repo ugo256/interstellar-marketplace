@@ -8,8 +8,7 @@ import {fetchCurrencies} from './components/currency_pouchdb.js';
 import { initialisedb } from './components/databases.js';
 
 function App() {
-  initialisedb('.components/stocks.json',dbs);
-  initialisedb('.components/currencies.json.',dbc);
+  
   const [stocks, setStocks] = useState([]);
   
   useEffect(() => {

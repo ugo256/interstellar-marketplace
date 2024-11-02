@@ -1,4 +1,4 @@
-const dbc = new PouchDB('inventory');
+const dbc = new PouchDB('currencies');
 
 async function initialiseCurrency() {
     const response = await fetch('./stocks.json');

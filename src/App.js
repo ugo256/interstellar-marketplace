@@ -8,12 +8,30 @@ import assetsData from './currencies.json';
 import {addStock, fetchStocks, updateStock, deleteStock, addCurrency, fetchCurrencies, updateCurrency, deleteCurrency} from './pouchdb.js';
 
 function App() {
+  const [stocks, setStocks] = useState([]);
+  const [name, setName] = useState('');
+  const [price, setPrice] = useState('');
+  const [id, setID] = useState(null);
+  
+  useEffect(() => {
+      loadStocks();
+  }, []);
+  
+  const loadStocks = () => {
+      fetchStocks().then(stocks => setStocks(stock));
+  };
   
   const assets = assetsData;
+  
 
   return (
     <div style={styles.container}>
       <Sidebar assets={assets} />
+    </div>
+    <div>
+    {stocks.map(stock => (
+      <li key={stock._id}>
+      <strong>{stock.name}</strong> (Price: {stock.price}) </li>
     </div>
   );
 }

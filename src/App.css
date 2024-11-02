@@ -16,3 +16,16 @@ button {
   font-size: 1em;
   font-family: 'Consolas', Courier, monospace;
 }
+
+.sbbutton {
+  background-color: #0a2542;
+}
+
+.sbbutton:hover {
+  background-color: #0056b3;
+}
+
+.sbbutton:active {
+  background-color: #003369;
+}
+

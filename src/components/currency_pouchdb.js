@@ -1,5 +1,5 @@
 import PouchDB from 'pouchdb';
-import {initialisedb} from './databases.js';
+import {initialisedb} from './databases';
 const dbc = new PouchDB('currencies');
 
 export const getCurrency = (id) => {

@@ -7,7 +7,8 @@ const db_s = new PouchDB('stocks');
 async function importJSON_s() {
     const response = await fetch('./components/stocks.json'); // Path to your JSON file
     const jsonData = await response.json();
-
+};
+    
 export const addStock = (ticker, name, price) => {
     const doc = {
         _id: ticker, // Unique ID based on ticker

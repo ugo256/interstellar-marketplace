@@ -11,5 +11,5 @@ export const getCurrency = (id) => {
 initialisedb('./currencies.json', dbc);
 dbc.put({
   _id: 'UNI',
-  _rev: doc._rev,
+  _rev: dbc._rev,
   price: 1.0})

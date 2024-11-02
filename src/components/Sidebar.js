@@ -20,6 +20,7 @@ const styles = {
     width: '250px',
     height: '100vh',
     backgroundColor: '#161342',
+    font: 'Courier New',
     padding: '10px',
     display: 'flex',
     flexDirection: 'column',
@@ -32,11 +33,13 @@ const styles = {
     padding: '10px',
     margin: '5px 0',
     textAlign: 'left',
+    font: 'Courier New',
     fontSize: '1em',
     backgroundColor: '#0a2542',
     border: '1px solid #2f4296',
     cursor: 'pointer',
-    'border-radius': '5px'
+    'border-radius': '5px',
+    color: '#daf0b4'
   },
   value: {
     fontSize: '1.5em',

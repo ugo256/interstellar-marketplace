@@ -28,6 +28,7 @@ function App() {
           setPrice('');
           loadStocks();
       });
+    console.log("Stock added")
   };
   
   const currencies = currData;

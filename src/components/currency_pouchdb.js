@@ -1,7 +1,7 @@
 const dbc = new PouchDB('currencies');
 
 async function initialiseCurrency() {
-    const response = await fetch('./stocks.json');
+    const response = await fetch('./currencies.json');
     const jsonData = await response.json();
     const initialCurrenciesMORP = jsonData.map(stock => ({
             ...stock,

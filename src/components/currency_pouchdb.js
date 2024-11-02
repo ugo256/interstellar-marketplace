@@ -2,13 +2,6 @@ import PouchDB from 'pouchdb';
 import { initialisedb } from './databases';
 const dbc = new PouchDB('currencies');
 
-// Call the function to initialize the inventory
-initialisedb('./currencies.json', dbc);
-dbc.put({
-  _id: 'UNI',
-  _rev: dbc._rev,
-  price: 1.0})
-
 export const getCurrency = (id) => {
   dbc.get(id)
     .then(doc => console.log("Currency price:", doc.price))
@@ -21,3 +14,9 @@ export const fetchCurrencies = () => {
     });
 };
 
+// Call the function to initialize the inventory
+initialisedb('./currencies.json', dbc);
+dbc.put({
+  _id: 'UNI',
+  _rev: dbc._rev,
+  price: 1.0})

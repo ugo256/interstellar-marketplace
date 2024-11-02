@@ -22,12 +22,12 @@ function App() {
   };
 
   const handleAdd = () => {
-    if (!ticker || !price) return; // Basic validation
+    if (!ticker || !price) return;
 
       addStock(ticker, parseFloat(price)).then(() => {
           setName('');
-          setAge('');
-          loadStocks(); // Reload data
+          setPrice('');
+          loadStocks();
       });
   };
   
@@ -46,12 +46,12 @@ function App() {
     />
     <input
       type="number"
-      placeholder="Age"
-      value={age}
-      onChange={e => setAge(e.target.value)}
+      placeholder="Price"
+      value={price}
+      onChange={e => setPrice(e.target.value)}
     />
     <button onClick={selectedId ? handleUpdate : handleAdd}>
-      {selectedId ? 'Update Person' : 'Add Person'}
+      {selectedId ? 'Update Stock' : 'Add Stock'}
     </button>
     <div>
     {stocks.map(stock => (

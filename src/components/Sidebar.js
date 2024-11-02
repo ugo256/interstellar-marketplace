@@ -39,7 +39,7 @@ const styles = {
     cursor: 'pointer',
     borderRadius: '5px',
     color: '#daf0b4',
-    transition: 'background-color 0.2s ease',
+    transition: 'background-color 0.2s ease'
   },
   value: {
     fontSize: '1.5em',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import currData from './components/currencies.json';
 import planetData from './components/planets.json';
@@ -16,13 +16,13 @@ function App() {
   }, []);
   
   const loadStocks = () => {
-      fetchStocks().then(stocks => setStocks(stock));
+      fetchStocks().then(stocks => setStocks(stocks));
   };
 
   const handleAdd = () => {
-    if (!ticker || !price) return;
+    if (!id || !price) return;
 
-      addStock(ticker, parseFloat(price)).then(() => {
+      addStock(id, name, parseFloat(price)).then(() => {
           setName('');
           setPrice('');
           loadStocks();
@@ -31,8 +31,6 @@ function App() {
   
   const currencies = currData;
   const planets = planetData;
-
-  const assets = assetsData;
   
 
   return (
@@ -52,8 +50,8 @@ function App() {
       value={price}
       onChange={e => setPrice(e.target.value)}
     />
-    <button onClick={selectedId ? handleUpdate : handleAdd}>
-      {selectedId ? 'Update Stock' : 'Add Stock'}
+    <button onClick={id ? handleAdd}>
+      {id ? 'Add Stock'}
     </button>
     <div>
     {stocks.map((stock) => (

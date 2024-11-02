@@ -36,7 +36,7 @@ function App() {
   return (
     <div>
     <div style={styles.container}>
-      <Sidebar assets={assets} />
+      <Sidebar planets={planets} />
     </div>
     <input 
       type="text"
@@ -50,8 +50,8 @@ function App() {
       value={price}
       onChange={e => setPrice(e.target.value)}
     />
-    <button onClick={id ? handleAdd}>
-      {id ? 'Add Stock'}
+    <button onClick={id ? handleAdd : null}>
+      {id ? 'Add Stock' : null}
     </button>
     <div>
     {stocks.map((stock) => (

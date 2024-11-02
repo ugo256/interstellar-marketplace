@@ -42,7 +42,7 @@ export const deleteStock = (id) => {
 
 const db_c = new PouchDB('currencies');
 
-async function importJSON_s() {
+async function importJSON_c() {
     const response = await fetch('./components/currencies.json'); // Path to your JSON file
     const jsonData = await response.json();
 };

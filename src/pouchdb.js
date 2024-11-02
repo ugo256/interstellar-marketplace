@@ -1,7 +1,6 @@
 import PouchDB from 'pouchdb'
 
 // Create a database named Stocks
-const PouchDB = require('pouchdb');
 const db_s = new PouchDB('stocks');
 
 export const addStock = (ticker, name, price) => {

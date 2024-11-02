@@ -7,6 +7,14 @@ const db_s = new PouchDB('stocks');
 async function importJSON_s() {
     const response = await fetch('./components/stocks.json'); // Path to your JSON file
     const jsonData = await response.json();
+    const modifiedData = jsonData.map(stock => ({
+            ...stock,
+        price: Math.random()*500 // Add a new field 'active' with a default value
+    }));
+
+    // Bulk insert modified documents into PouchDB
+    const result = await db_s.bulkDocs(modifiedData);
+    document.getElementById('status').innerText = `Imported ${result.length} documents successfully.`;
 };
     
 export const addStock = (ticker, name, price) => {

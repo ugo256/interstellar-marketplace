@@ -24,10 +24,10 @@ function App() {
   const handleAdd = () => {
     if (!ticker || !price) return; // Basic validation
 
-      addPerson(ticker, parseFloat(price)).then(() => {
+      addStock(ticker, parseFloat(price)).then(() => {
           setName('');
           setAge('');
-          loadPeople(); // Reload data
+          loadStocks(); // Reload data
       });
   };
   

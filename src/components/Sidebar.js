@@ -13,7 +13,7 @@ function Sidebar({ planets }) {
       ))}
     </div>
   );
-}
+};
 
 const styles = {
   sidebar: {

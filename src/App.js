@@ -3,13 +3,10 @@ import Sidebar from './components/Sidebar';
 import currData from './components/currencies.json';
 import planetData from './components/planets.json';
 import './App.css';
-import {addStock, fetchStocks, updateStock, deleteStock, addCurrency, fetchCurrencies, updateCurrency, deleteCurrency} from './pouchdb.js';
+import {fetchStocks} from './components/stock_pouchdb.js';
+import {fetchCurrencies} from './components/currency_pouchdb.js';
 
 function App() {
-  const [stocks, setStocks] = useState([]);
-  const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
-  const [id, setID] = useState(null);
   
   useEffect(() => {
       loadStocks();
@@ -17,18 +14,6 @@ function App() {
   
   const loadStocks = () => {
       fetchStocks().then(stocks => setStocks(stocks));
-  };
-
-  const handleAdd = () => {
-    if (!id || !price) return;
-
-      addStock(id, name, parseFloat(price)).then(() => {
-          setID('');
-          setName('');
-          setPrice('');
-          loadStocks();
-      });
-    console.log("Stock added")
   };
   
   const currencies = currData;
@@ -41,27 +26,6 @@ function App() {
       <Sidebar planets={planets} />
     </div>
     <div style={styles.mainContent}>
-    <input
-      type="text"
-      placeholder="Ticker"
-      value={id}
-      onChange={e => setID(e.target.value)}
-    />
-    <input 
-      type="text"
-      placeholder="Name"
-      value={name}
-      onChange={e => setName(e.target.value)}
-    />
-    <input
-      type="number"
-      placeholder="Price"
-      value={price}
-      onChange={e => setPrice(e.target.value)}
-    />
-    <button onClick={id ? handleAdd : null}>
-      {id ? 'Add Stock' : null}
-    </button>
     <div>
     {stocks.map((stock) => (
       <li key={stock._id}>

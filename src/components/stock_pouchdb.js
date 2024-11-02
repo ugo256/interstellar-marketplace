@@ -1,3 +1,4 @@
+import PouchDB from 'pouchdb';
 import {initialisedb} from './databases.js';
 const dbs = new PouchDB('stocks');
 

@@ -50,8 +50,8 @@ function App() {
       value={price}
       onChange={e => setPrice(e.target.value)}
     />
-    <button onClick={id ? handleAdd}>
-      {id ? 'Add Stock'}
+    <button onClick={handleAdd}>
+      {'Add Stock'}
     </button>
     <div>
     {stocks.map((stock) => (

@@ -29,12 +29,12 @@ function App() {
     <div>
     {stocks.map((stock) => (
       <li key={stock._id}>
-      <strong>{stock.name}</strong> (Price: {stock.price}) </li>
-    ))}
+      <strong>{stock.name}</strong> (Price: {stock.price})
+      </li>
+      )}
     </div>
     </div>
     </div>);
-}
 
 const styles = {
   container: {

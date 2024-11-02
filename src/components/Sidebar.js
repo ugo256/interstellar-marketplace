@@ -25,7 +25,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    'overflow-y': 'auto',
+    overflowY: 'auto',
     color: '#daf0b4'
   },
   button: {
@@ -37,7 +37,7 @@ const styles = {
     fontSize: '1em',
     border: '1px solid #2f4296',
     cursor: 'pointer',
-    'border-radius': '5px',
+    borderRadius: '5px',
     color: '#daf0b4',
     transition: 'background-color 0.2s ease',
   },

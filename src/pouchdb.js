@@ -1,4 +1,4 @@
-import PouchDB from './pouchdb'
+import PouchDB from 'pouchdb'
 
 // Create a database named Stocks
 const db_s = new PouchDB('stocks');
@@ -62,7 +62,7 @@ export const updateCurrency = (id, updatedData) => {
 
 // Function to delete a stock
 export const deleteCurrency = (id) => {
-    return db.get(id).then(doc => {
+    return db_c.get(id).then(doc => {
         return db_c.remove(doc);
     });
 };

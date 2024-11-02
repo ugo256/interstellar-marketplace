@@ -55,7 +55,7 @@ function App() {
       {id ? 'Add Stock' : null}
     </button>
     <div>
-    {stocks.map((stock) => (
+    {stocks.map((stocks) => (
       <li key={stock._id}>
       <strong>{stock.name}</strong> (Price: {stock.price}) </li>
     ))}

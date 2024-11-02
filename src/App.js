@@ -7,6 +7,7 @@ import {fetchStocks} from './components/stock_pouchdb.js';
 import {fetchCurrencies} from './components/currency_pouchdb.js';
 
 function App() {
+  const [stocks, setStocks] = useState([]);
   
   useEffect(() => {
       loadStocks();

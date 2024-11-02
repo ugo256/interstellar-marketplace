@@ -19,7 +19,7 @@ const styles = {
   sidebar: {
     width: '250px',
     height: '100vh',
-    backgroundColor: '##161342',
+    backgroundColor: '#161342',
     padding: '10px',
     display: 'flex',
     flexDirection: 'column',
@@ -32,7 +32,7 @@ const styles = {
     margin: '5px 0',
     textAlign: 'left',
     fontSize: '1em',
-    backgroundColor: '##0a2542',
+    backgroundColor: '#0a2542',
     border: '1px solid #ddd',
     cursor: 'pointer',
     'border-radius': '5px'

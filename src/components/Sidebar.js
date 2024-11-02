@@ -1,13 +1,14 @@
-// src/components/Sidebar.js
-
 import React from 'react';
+import { getCurrency } from './utils';
 
-function Sidebar({ assets }) {
+
+function Sidebar({ planets }) {
   return (
     <div style={styles.sidebar}>
-      {assets.map((asset, index) => (
+        <b><h2 style={{margin: '0 5px'}}>Your Portfolio</h2></b>
+      {planets.map((planet, index) => (
         <button key={index} style={styles.button}>
-          {asset.index}: 0 {asset.name}
+          <b><p style={styles.value}>{getCurrency(planet.currency).symbol}0</p></b>
         </button>
       ))}
     </div>
@@ -16,13 +17,14 @@ function Sidebar({ assets }) {
 
 const styles = {
   sidebar: {
-    width: '200px',
+    width: '250px',
     height: '100vh',
     backgroundColor: '#f4f4f4',
     padding: '10px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
+    'overflow-y': 'auto'
   },
   button: {
     width: '100%',
@@ -33,7 +35,12 @@ const styles = {
     backgroundColor: '#ffffff',
     border: '1px solid #ddd',
     cursor: 'pointer',
+    'border-radius': '5px'
   },
+  value: {
+    fontSize: '1.5em',
+    margin: '0 0'
+  }
 };
 
 export default Sidebar;

@@ -1,10 +1,8 @@
-// src/App.js
-
 import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
-import Portfolio from './components/Portfolio';
-import StockInput from './components/StockInput';
-import assetsData from './currencies.json';
+import currData from './components/currencies.json';
+import planetData from './components/planets.json';
+import './App.css';
 import {addStock, fetchStocks, updateStock, deleteStock, addCurrency, fetchCurrencies, updateCurrency, deleteCurrency} from './pouchdb.js';
 
 function App() {
@@ -31,10 +29,14 @@ function App() {
       });
   };
   
+  const currencies = currData;
+  const planets = planetData;
+
   const assets = assetsData;
   
 
   return (
+    <div>
     <div style={styles.container}>
       <Sidebar assets={assets} />
     </div>
@@ -54,11 +56,12 @@ function App() {
       {selectedId ? 'Update Stock' : 'Add Stock'}
     </button>
     <div>
-    {stocks.map(stock => (
+    {stocks.map((stock) => (
       <li key={stock._id}>
       <strong>{stock.name}</strong> (Price: {stock.price}) </li>
+    ))}
     </div>
-  );
+    </div>);
 }
 
 const styles = {

@@ -7,7 +7,7 @@ function Sidebar({ planets }) {
     <div style={styles.sidebar}>
         <b><h2 style={{margin: '0 5px'}}>Your Portfolio</h2></b>
       {planets.map((planet, index) => (
-        <button key={index} style={styles.button} className='sbbutton'>
+        <button key={index} style={styles.button}>
           <b><p style={styles.value}>{getCurrency(planet.currency).symbol}0</p></b>
         </button>
       ))}

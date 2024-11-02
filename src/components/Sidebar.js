@@ -24,7 +24,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    'overflow-y': 'auto'
+    'overflow-y': 'auto',
+    color: '#daf0b4'
   },
   button: {
     width: '100%',
@@ -33,7 +34,7 @@ const styles = {
     textAlign: 'left',
     fontSize: '1em',
     backgroundColor: '#0a2542',
-    border: '1px solid #ddd',
+    border: '1px solid #2f4296',
     cursor: 'pointer',
     'border-radius': '5px'
   },

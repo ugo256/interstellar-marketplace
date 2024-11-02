@@ -1,0 +1,36 @@
+[
+    { 
+        "index": "$:HMUG",
+        "name": "Hutton Mugs",
+        "planet": "Earth"
+    },
+    { 
+        "index": "♀:VGAS",
+        "name": "Venusian Gas Exports",
+        "planet": "Venus"
+    },
+    { 
+        "index": "☾:ROCK",
+        "name": "Rock & Stone Lunar Mining Company",
+        "planet": "Moon"
+    },
+    { 
+        "index": "♃:JGAS",
+        "name": "Jovian Gas Exports",
+        "planet": "Jupiter"
+    },
+
+    { 
+        "index": "♃:JETS",
+        "name": "Jetstream Gas Extraction Inc.",
+        "planet": "Jupiter"
+    },
+
+    { 
+        "index": "♀:JETS",
+        "name": "Jetstream Gas Extraction Inc.",
+        "planet": "Venus"
+    }
+
+  
+]

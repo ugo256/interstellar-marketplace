@@ -34,10 +34,11 @@ function App() {
   
 
   return (
-    <div>
     <div style={styles.container}>
+    <div>
       <Sidebar planets={planets} />
     </div>
+    <div style={styles.mainContent}>
     <input 
       type="text"
       placeholder="Name"
@@ -58,6 +59,7 @@ function App() {
       <li key={stock._id}>
       <strong>{stock.name}</strong> (Price: {stock.price}) </li>
     ))}
+    </div>
     </div>
     </div>);
 }

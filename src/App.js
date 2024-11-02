@@ -35,6 +35,7 @@ function App() {
     </div>
     </div>
     </div>);
+};
 
 const styles = {
   container: {

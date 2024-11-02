@@ -23,6 +23,7 @@ function App() {
     if (!id || !price) return;
 
       addStock(id, name, parseFloat(price)).then(() => {
+          setID('');
           setName('');
           setPrice('');
           loadStocks();
@@ -39,6 +40,12 @@ function App() {
       <Sidebar planets={planets} />
     </div>
     <div style={styles.mainContent}>
+    <input
+      type="text"
+      placeholder="Ticker"
+      value={id}
+      onChange={e => setPrice(e.target.value)}
+    />
     <input 
       type="text"
       placeholder="Name"
@@ -55,7 +62,7 @@ function App() {
       {id ? 'Add Stock' : null}
     </button>
     <div>
-    {stocks.map((stocks) => (
+    {stocks.map((stock) => (
       <li key={stock._id}>
       <strong>{stock.name}</strong> (Price: {stock.price}) </li>
     ))}

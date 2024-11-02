@@ -3,13 +3,13 @@ import {initialisedb} from './databases.js';
 const dbc = new PouchDB('currencies');
 
 export const getCurrency = (id) => {
-  dbc.get(code)
+  dbc.get(id)
     .then(doc => console.log("Currency price:", doc.price))
     .catch(error => console.error("Currency not found:", error));
 };
 
 export const fetchCurrencies = () => {
-    return db_c.allDocs({ include_docs: true }).then(result => {
+    return dbc.allDocs({ include_docs: true }).then(result => {
         return result.rows.map(row => row.doc);
     });
 };

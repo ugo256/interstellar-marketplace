@@ -45,7 +45,7 @@ function App() {
       type="text"
       placeholder="Ticker"
       value={id}
-      onChange={e => setPrice(e.target.value)}
+      onChange={e => setID(e.target.value)}
     />
     <input 
       type="text"

@@ -7,5 +7,11 @@ export const getStocks = (id) => {
     .catch(error => console.error("Stock not found:", error));
 };
 
+export const fetchStocks = () => {
+    return db_s.allDocs({ include_docs: true }).then(result => {
+        return result.rows.map(row => row.doc);
+    });
+};
+
 // Call the function to initialize the inventory
 initialisedb('./stocks.json', dbs);

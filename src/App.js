@@ -25,6 +25,7 @@ function App() {
           name: row.doc.name,
           price: row.doc.price,
           planet: row.doc.planet,
+          index: row.doc.index,
         }));
         setStocks(stockList); // Update the stocks state with the fetched data
       } catch (error) {

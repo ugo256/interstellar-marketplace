@@ -8,6 +8,18 @@ export const getCurrency = (id) => {
     .catch(error => console.error("Currency not found:", error));
 };
 
+export const currPrice = (id) => {
+    try {
+        const doc = dbc.get(id); // Fetch the document by ID
+        const value = doc.price; // Access the specific field
+        console.log(`Value of price for currency ${id}:`, value);
+        return value; // Return the value if needed
+    } catch (error) {
+        console.error('Error fetching document:', error);
+    
+};
+};
+
 export const fetchCurrencies = () => {
     return dbc.allDocs({ include_docs: true }).then(result => {
         return result.rows.map(row => row.doc);
@@ -15,8 +27,7 @@ export const fetchCurrencies = () => {
 };
 
 // Call the function to initialize the inventory
+
 initialisedb('./currencies.json', dbc);
-dbc.put({
-  _id: 'UNI',
-  _rev: dbc._rev,
-  price: 1.0})
+  
+export default dbc;

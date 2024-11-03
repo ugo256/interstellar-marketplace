@@ -1,19 +1,28 @@
 export async function initialisedb(file,db) {
-    db.destroy();
+    try {
+        const info = await db.info(); // Retrieve database information
+        console.log('Database already exists:', info.db_name);
+        return;
+    } catch (error) {
     const response = await fetch(file);
     const jsonData = await response.json();
-    const initialData = jsonData.map(stock => ({
-            ...stock,
-        price: Math.random()*500 // Add a new field 'active' with a default value
+    const initialData = jsonData.map((stock, index) => ({
+        ...stock, // Ensure _id is unique, using index if necessary
+        price: Math.random() * 500, // Generate a random price
+        _id: stock.index
     }));
+    
+    console.log(initialData);
+    ;
 
     // Bulk insert modified documents into PouchDB
     try {
         // Bulk insert initial items into the database
         const response = await db.bulkDocs(initialData);
-        console.log('Database initialized successfully:', response,file);
+        console.log('Database initialized successfully:', response);
     } catch (error) {
         console.error('Error initializing database:', error);
+    }
     }
 };
 

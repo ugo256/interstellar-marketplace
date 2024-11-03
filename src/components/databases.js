@@ -1,9 +1,4 @@
 export async function initialisedb(file,db) {
-    try {
-        const info = await db.info(); // Retrieve database information
-        console.log('Database already exists:', info.db_name);
-        return;
-    } catch (error) {
     const response = await fetch(file);
     const jsonData = await response.json();
     const initialData = jsonData.map((stock, index) => ({
@@ -22,7 +17,6 @@ export async function initialisedb(file,db) {
         console.log('Database initialized successfully:', response);
     } catch (error) {
         console.error('Error initializing database:', error);
-    }
     }
 };
 

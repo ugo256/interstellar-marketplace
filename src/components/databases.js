@@ -1,5 +1,3 @@
-import {getSkewedRandomNumber} from '../updatealgo.js';
-
 export async function initialisedb(file,db) {
     const response = await fetch(file);
     const jsonData = await response.json();
@@ -33,7 +31,7 @@ export async function updateAllStock(db) {
             const doc = row.doc;
             if (typeof doc.price === 'number') {
                 // PUT THE UPDATING ALGORITHM HERE
-                doc.price += getSkewedRandomNumber(doc.price)*0.3*doc.price
+                doc.price = 10+Math.max(Math.random()*0.1,0.003*doc.price*Math.sqrt(-2.0 * Math.log(Math.random())) * Math.cos(2.0 * Math.PI * Math.random())+0.9*doc.price);
             }
             return doc;
         });

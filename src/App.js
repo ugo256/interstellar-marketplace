@@ -5,8 +5,13 @@ import './App.css';
 import {stockPrice} from './components/stock_pouchdb.js';
 import {fetchCurrencies, currPrice} from './components/currency_pouchdb.js';
 import dbs from './components/stock_pouchdb.js';
+import { GetCurrency } from './components/utils';
+import { GetPlanet } from './components/utils';
 
 function App() {
+
+  const [selectedPlanet, setSelectedPlanet] = useState(GetPlanet("Earth")); // Default to first planet
+
   
   const [stocks, setStocks] = useState([]);
 
@@ -63,10 +68,10 @@ function App() {
   return (
     <div style={styles.container}>
     <div>
-      <Sidebar planets={planets} />
+      <Sidebar planets={planets}  ssp={setSelectedPlanet}/>
     </div>
     <div style={styles.mainContent}>
-      <MainContent stocks={stocks}/>
+      <MainContent stocks={stocks} currPlanet={selectedPlanet}/>
     </div>
     </div>);
 };

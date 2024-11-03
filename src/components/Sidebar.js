@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GetCurrency } from './utils';
+import { GetPlanet } from './utils';
 
+function Sidebar({ planets, ssp }) {
 
-function Sidebar({ planets }) {
+  if (typeof ssp !== 'function') {
+    console.error(ssp);
+}
+
   return (
     <div style={styles.sidebar}>
+      
         <b><h2 style={{margin: '0 5px'}}>Your Portfolio</h2></b>
       {planets.map((planet, index) => (
-        <button key={index} style={styles.button} className='sbbutton'>
+        <button key={index} style={styles.button} className='sbbutton' onClick={() => ssp(planet)} >
+          
           <b><p style={styles.value}>{GetCurrency(planet.currency).symbol}0</p></b>
         </button>
       ))}

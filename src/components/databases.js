@@ -1,4 +1,5 @@
 export async function initialisedb(file,db) {
+    db.destroy();
     const response = await fetch(file);
     const jsonData = await response.json();
     const initialData = jsonData.map(stock => ({

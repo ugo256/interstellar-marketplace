@@ -17,6 +17,6 @@ export const fetchCurrencies = () => {
 // Call the function to initialize the inventory
 initialisedb('./currencies.json', dbc);
 dbc.put({
-  _id: 'UNI',
+  index: 'UNI',
   _rev: dbc._rev,
   price: 1.0})

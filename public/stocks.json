@@ -124,7 +124,7 @@
     { 
         "index": "☿:MCRY",
         "name": "Mercury Vacations",
-        "planet": "Earth"
+        "planet": "Mercury"
     },
     { 
         "index": "♆:HACK",
@@ -144,7 +144,7 @@
     { 
         "index": "♇:WNTR",
         "name": "Winter Vacations Pluto",
-        "planet": "Earth"
+        "planet": "Pluto"
     },
     { 
         "index": "♇:TSLA",
@@ -159,7 +159,7 @@
     { 
         "index": "♇:HAPM",
         "name": "Hades Incorporated Pomegranates",
-        "planet": "Earth"
+        "planet": "Pluto"
     },
     { 
         "index": "☉︎:FECL",

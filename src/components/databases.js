@@ -3,7 +3,7 @@ export async function initialisedb(file,db) {
     const jsonData = await response.json();
     const initialData = jsonData.map((stock, index) => ({
         ...stock, // Ensure _id is unique, using index if necessary
-        price: Math.random() * 500, // Generate a random price
+        price: Math.random() * 400 + 100, // Generate a random price
         _id: stock.index
     }));
     

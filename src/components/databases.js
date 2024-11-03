@@ -41,6 +41,10 @@ export async function updateAllStock(db) {
                     tmp = doc.price*Math.random()*(-0.03) - Math.random()*0.9;
                 }
                 doc.price += tmp;
+
+                if (doc.price < 1) {
+                    doc.price = Math.abs(doc.price * Math.random()*3);
+                }
             }
             return doc;
         });

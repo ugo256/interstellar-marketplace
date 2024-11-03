@@ -5,6 +5,9 @@ import './App.css';
 import {stockPrice} from './components/stock_pouchdb.js';
 import {fetchCurrencies, currPrice} from './components/currency_pouchdb.js';
 import dbs from './components/stock_pouchdb.js';
+import { GetCurrency } from './components/utils';
+import { GetPlanet } from './components/utils';
+import { updateAllStock } from './components/databases.js';
 
 function App() {
 
@@ -21,6 +24,7 @@ function App() {
         const stockList = result.rows.map(row => ({
           name: row.doc.name,
           price: row.doc.price,
+          planet: row.doc.planet,
         }));
         setStocks(stockList); // Update the stocks state with the fetched data
       } catch (error) {

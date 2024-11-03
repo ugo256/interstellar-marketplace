@@ -28,7 +28,7 @@ export async function updateAllStock(db) {
 
         // Step 2: Map through all documents, updating each stock quantity
         const updatedDocs = allDocs.rows.map(row => {
-            const tmp = 0;
+            let tmp = 0;
             const doc = row.doc;
             if (typeof doc.price === 'number') {
 

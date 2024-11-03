@@ -10,8 +10,7 @@ function MainContent({ stocks }) {
       <h1>Stock Prices</h1>
       <ul>
         {stocks.map((stock) => (
-          <li key={stock._id}>
-            {stock.id} 
+          <li key={stock.index}>
             <strong>{stock.name}</strong>: ${stock.price.toFixed(2)}
           </li>
         ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCurrency } from './utils';
+import { GetCurrency } from './utils';
 
 
 function Sidebar({ planets }) {
@@ -8,7 +8,7 @@ function Sidebar({ planets }) {
         <b><h2 style={{margin: '0 5px'}}>Your Portfolio</h2></b>
       {planets.map((planet, index) => (
         <button key={index} style={styles.button} className='sbbutton'>
-          <b><p style={styles.value}>{getCurrency(planet.currency).symbol}0</p></b>
+          <b><p style={styles.value}>{GetCurrency(planet.currency).symbol}0</p></b>
         </button>
       ))}
     </div>

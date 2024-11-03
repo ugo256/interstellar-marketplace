@@ -1,8 +1,6 @@
 import React, {useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent.js';
-import currData from './components/currencies.json';
-import planetData from './components/planets.json';
 import './App.css';
 import {fetchStocks} from './components/stock_pouchdb.js';
 import {fetchCurrencies} from './components/currency_pouchdb.js';
@@ -19,8 +17,33 @@ function App() {
       fetchStocks().then(stocks => setStocks(stocks));
   };
   
-  const currencies = currData;
-  const planets = planetData;
+  const [currencies, setCurrencies] = useState([]);
+
+  useEffect(() => {
+      fetch('/currencies.json') // Fetch from public directory
+          .then((response) => {
+              if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              return response.json();
+          })
+          .then((data) => setCurrencies(data))
+          .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
+  const [planets, setPlanets] = useState([]);
+
+  useEffect(() => {
+      fetch('/planets.json') // Fetch from public directory
+          .then((response) => {
+              if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              return response.json();
+          })
+          .then((data) => setPlanets(data))
+          .catch((error) => console.error('Error fetching data:', error));
+  }, []);
   
 
   return (

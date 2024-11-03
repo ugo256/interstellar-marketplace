@@ -12,7 +12,7 @@ function MainContent({ stocks, currPlanet }) {
         {stocks.map((stock) => (
           <li key={stock._id} hidden={currPlanet.name != stock.planet}>
             {stock.id}
-            <strong>{stock.index} {stock.name}</strong>: {GetCurrency(currPlanet.currency).symbol}{stock.price.toFixed(2)}
+            <strong>{stock.index} - {stock.name}</strong>: {GetCurrency(currPlanet.currency).symbol}{stock.price.toFixed(2)}
           </li>
         ))}
       </ul>

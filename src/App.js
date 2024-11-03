@@ -2,24 +2,34 @@ import React, {useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent.js';
 import './App.css';
-import {fetchStocks} from './components/stock_pouchdb.js';
-import {fetchCurrencies} from './components/currency_pouchdb.js';
+import {stockPrice} from './components/stock_pouchdb.js';
+import {fetchCurrencies, currPrice} from './components/currency_pouchdb.js';
+import dbs from './components/stock_pouchdb.js';
 
 function App() {
   
   const [stocks, setStocks] = useState([]);
 
-  useEffect(() => {
-      fetch('/stocks.json')
-          .then((response) => {
-              if (!response.ok) {
-                  throw new Error(`HTTP error! status: ${response.status}`);
-              }
-              return response.json();
-          })
-          .then((data) => setStocks(data))
-          .catch((error) => console.error('Error fetching data:', error));
+    useEffect(() => {
+    // Fetch all stocks from the database
+    const fetchStocks = async () => {
+      try {
+        const result = await dbs.allDocs({ include_docs: true });
+        const stockList = result.rows.map(row => ({
+          name: row.doc.name,
+          price: row.doc.price,
+        }));
+        setStocks(stockList); // Update the stocks state with the fetched data
+      } catch (error) {
+        console.error('Error fetching stocks:', error);
+      }
+    };
+
+    fetchStocks(); // Call the function to fetch stocks
   }, []);
+
+
+
   
   const [currencies, setCurrencies] = useState([]);
 

@@ -4,16 +4,14 @@ import { GetPlanet } from './utils';
 
 function Sidebar({ planets, ssp }) {
 
-  if (typeof ssp !== 'function') {
-    console.error(ssp);
-}
+  const onClick =((planet) => {ssp(planet)}); 
 
   return (
     <div style={styles.sidebar}>
       
         <b><h2 style={{margin: '0 5px'}}>Your Portfolio</h2></b>
       {planets.map((planet, index) => (
-        <button key={index} style={styles.button} className='sbbutton' onClick={() => ssp(planet)} >
+        <button key={index} style={styles.button} className='sbbutton' onClick={() => onClick(planet)} >
           
           <b><p style={styles.value}>{GetCurrency(planet.currency).symbol}0</p></b>
         </button>

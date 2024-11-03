@@ -12,9 +12,9 @@ import { updateAllStock } from './components/databases.js';
 function App() {
 
   const [selectedPlanet, setSelectedPlanet] = useState(GetPlanet("Earth")); // Default to first planet
-
-  
   const [stocks, setStocks] = useState([]);
+  const [currencies, setCurrencies] = useState([]);
+  const [planets, setPlanets] = useState([]);
 
     useEffect(() => {
     // Fetch all stocks from the database
@@ -42,7 +42,7 @@ function App() {
 
 
   
-  const [currencies, setCurrencies] = useState([]);
+  
 
   useEffect(() => {
       fetch('/currencies.json')
@@ -56,7 +56,7 @@ function App() {
           .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
-  const [planets, setPlanets] = useState([]);
+  
 
   useEffect(() => {
       fetch('/planets.json')

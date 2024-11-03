@@ -9,9 +9,8 @@ function MainContent({ stocks, currPlanet }) {
     <div>
       <h1>{currPlanet.adj} Stock Prices</h1>
       <ul>
-        {stocks.filter(function(s){
-    return s.planet == currPlanet.name;}).map((stock) => (
-          <li key={stock._id}>
+        {stocks.map((stock) => (
+          <li key={stock._id} hidden={currPlanet.name != stock.planet}>
             {stock.id}
             <strong>{stock.name}</strong>: {GetCurrency(currPlanet.currency).symbol}{stock.price.toFixed(2)}
           </li>

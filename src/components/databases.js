@@ -1,3 +1,5 @@
+import {getSkewedRandomNumber} from '../updatealgo.js';
+
 export async function initialisedb(file,db) {
     const response = await fetch(file);
     const jsonData = await response.json();

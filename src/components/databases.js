@@ -33,7 +33,6 @@ export async function updateAllStock(db) {
                 const tmp = 0;
                 // PUT THE UPDATING ALGORITHM HERE
                 doc.price = 10+Math.max(Math.random()*0.1,(1+Math.random()*0.05)*0.003*doc.price*Math.sqrt(-2.0 * Math.log(Math.random())) * Math.cos(2.0 * Math.PI * Math.random())+0.9*doc.price);
-            }
                 if ((doc.price > 100) || (doc.price < 50)) {
                     tmp += doc.price*Math.random()*0.03 + Math.random()*0.9;
                 }
@@ -41,6 +40,7 @@ export async function updateAllStock(db) {
                     tmp += doc.price*Math.random()*(-0.03) - Math.random()*0.9;
                 }
                 doc.price = tmp;
+            }
             return doc;
         });
 

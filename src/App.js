@@ -5,6 +5,7 @@ import './App.css';
 import {stockPrice} from './components/stock_pouchdb.js';
 import {fetchCurrencies, currPrice} from './components/currency_pouchdb.js';
 import dbs from './components/stock_pouchdb.js';
+import {updateAllStock} from './components/databases.js';
 
 function App() {
   
@@ -26,8 +27,12 @@ function App() {
     };
 
     fetchStocks(); // Call the function to fetch stocks
+    const intervalId = setInterval(() => {
+      fetchStocks();
+      updateAllStock(dbs);
+    }, 1000);
+    return () => clearInterval(intervalId);
   }, []);
-
 
 
   

@@ -1,5 +1,6 @@
 import React, {useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
+import MainContent from './components/MainContent.js';
 import currData from './components/currencies.json';
 import planetData from './components/planets.json';
 import './App.css';
@@ -28,13 +29,7 @@ function App() {
       <Sidebar planets={planets} />
     </div>
     <div style={styles.mainContent}>
-    <div>
-    {stocks.map((stock) => (
-      <li key={stock._id}>
-      <strong>{stock.name}</strong> (Price: {stock.price})
-      </li>
-      ))}
-    </div>
+      <MainContent stocks={stocks}/>
     </div>
     </div>);
 };

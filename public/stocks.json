@@ -31,6 +31,164 @@
         "name": "Jetstream Gas Extraction Inc.",
         "planet": "Venus"
     }
-
-  
+    { 
+        "index": "☉︎:GODS",
+        "name": "Creation Gods Creation Company",
+        "planet": "Sun"
+    },
+    { 
+        "index": "☉︎:AURA",
+        "name": "Aurorae",
+        "planet": "Sun"
+    },
+    { 
+        "index": "☾:^MNSH",
+        "name": "Pre-Post-Prohibition Moonshine Index",
+        "planet": "Moon"
+    },
+    { 
+        "index": "☾:WRWF",
+        "name": "WRWLF Personal Growth",
+        "planet": "Moon"
+    },
+    { 
+        "index": "☾:CLML",
+        "name": "Calamel Personal Protection and Jewelry Company",
+        "planet": "Moon"
+    },
+    { 
+        "index": "$:CAMB",
+        "name": "Cambridge Conglomerate",
+        "planet": "Earth"
+    },
+    { 
+        "index": "$:OXFD",
+        "name": "Oxford Conglomerate",
+        "planet": "Earth"
+    },
+    { 
+        "index": "☾:FTID",
+        "name": "Tide Futures",
+        "planet": "Moon"
+    },
+    { 
+        "index": "☾:RABT",
+        "name": "Rabbit Traditional Medicine",
+        "planet": "Moon"
+    },
+    { 
+        "index": "♃:MOON",
+        "name": "Jovian Moon Management",
+        "planet": "Jupiter"
+    },
+    { 
+        "index": "♃:PHLR",
+        "name": "Pink Haired Little Rats",
+        "planet": "Jupiter"
+    },
+    { 
+        "index": "☾:LORD",
+        "name": "Lunar Cult Personal Empowerment Ltd Pty",
+        "planet": "Moon"
+    },
+    { 
+        "index": "♄:FLTY",
+        "name": "Ring Floaties",
+        "planet": "Saturn"
+    },
+    { 
+        "index": "♃:HMUG",
+        "name": "Hutton Mugs",
+        "planet": "Jupiter"
+    },
+    { 
+        "index": "♅:UFNY",
+        "name": "Uranus Comedy Production Troupe",
+        "planet": "Uranus"
+    },
+    { 
+        "index": "☿:FSLR",
+        "name": "Mercury Solar Futures",
+        "planet": "Mercury"
+    },
+    { 
+        "index": "☿:SVAC",
+        "name": "Suntan Vacation Specialists",
+        "planet": "Mercury"
+    },
+    { 
+        "index": "$:MCRY",
+        "name": "Mercury Vacations",
+        "planet": "Earth"
+    },
+    { 
+        "index": "☿:MCRY",
+        "name": "Mercury Vacations",
+        "planet": "Earth"
+    },
+    { 
+        "index": "♆:HACK",
+        "name": "Hack Cambridge Neptune Inc.",
+        "planet": "Neptune"
+    },
+    { 
+        "index": "♆:FISH",
+        "name": "French-Neptunian Interest Shares",
+        "planet": "Neptune"
+    },
+    { 
+        "index": "♆:FRNC",
+        "name": "Fish 'Round Neptune's Centre",
+        "planet": "Neptune"
+    },
+    { 
+        "index": "♇:WNTR",
+        "name": "Winter Vacations Pluto",
+        "planet": "Earth"
+    },
+    { 
+        "index": "♇:TSLA",
+        "name": "Tesla",
+        "planet": "Pluto"
+    },
+    { 
+        "index": "♆:TSLA",
+        "name": "Hutton Mugs",
+        "planet": "Neptune"
+    },
+    { 
+        "index": "♇:HAPM",
+        "name": "Hades Incorporated Pomegranates",
+        "planet": "Earth"
+    },
+    { 
+        "index": "☉︎:FECL",
+        "name": "Eclipse Futures",
+        "planet": "Sun"
+    },
+    { 
+        "index": "♂:VRPT",
+        "name": "Martian Verdant Body Paint Company",
+        "planet": "Mars"
+    },
+    { 
+        "index": "♂:CHCL",
+        "name": "Choco-Mine",
+        "planet": "Mars"
+    },
+    { 
+        "index": "$:FHCK",
+        "name": "Cam Hack 2024 Futures",
+        "planet": "Earth"
+    },
+    { 
+        "index": "$:HMUG",
+        "name": "Hutton Mugs",
+        "planet": "Earth"
+    },
+    { 
+        "index": "♂:CRAB",
+        "name": "Mars Rust Company",
+        "planet": "Mars"
+    }
 ]

@@ -11,7 +11,7 @@ export async function initialisedb(file,db) {
     try {
         // Bulk insert initial items into the database
         const response = await db.bulkDocs(initialData);
-        console.log('Database initialized successfully:', response);
+        console.log('Database initialized successfully:', response,file);
     } catch (error) {
         console.error('Error initializing database:', error);
     }

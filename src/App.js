@@ -8,19 +8,23 @@ import {fetchCurrencies} from './components/currency_pouchdb.js';
 function App() {
   
   const [stocks, setStocks] = useState([]);
-  
+
   useEffect(() => {
-      loadStocks();
+      fetch('/stocks.json')
+          .then((response) => {
+              if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+              }
+              return response.json();
+          })
+          .then((data) => setStocks(data))
+          .catch((error) => console.error('Error fetching data:', error));
   }, []);
-  
-  const loadStocks = () => {
-      fetchStocks().then(stocks => setStocks(stocks));
-  };
   
   const [currencies, setCurrencies] = useState([]);
 
   useEffect(() => {
-      fetch('/currencies.json') // Fetch from public directory
+      fetch('/currencies.json')
           .then((response) => {
               if (!response.ok) {
                   throw new Error(`HTTP error! status: ${response.status}`);
@@ -34,7 +38,7 @@ function App() {
   const [planets, setPlanets] = useState([]);
 
   useEffect(() => {
-      fetch('/planets.json') // Fetch from public directory
+      fetch('/planets.json')
           .then((response) => {
               if (!response.ok) {
                   throw new Error(`HTTP error! status: ${response.status}`);

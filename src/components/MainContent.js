@@ -9,7 +9,7 @@ function MainContent({ stocks, currPlanet }) {
       return (
     <div>
       <h1>{currPlanet.adj} Stock Prices</h1>
-      <h3>currency: {curr.name} ({curr.index})</h3>
+      <h3>Currency: {curr.name} ({curr.index})</h3>
       <ul>
         {stocks.map((stock) => (
           <li key={stock._id} hidden={currPlanet.name != stock.planet}>

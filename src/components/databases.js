@@ -33,7 +33,7 @@ export async function updateAllStock(db) {
             const doc = row.doc;
             if (typeof doc.price === 'number') {
                 // PUT THE UPDATING ALGORITHM HERE
-                doc.price = Math.max((0.05*(Math.sqrt( -2.0 * Math.log( Math.random() ) ) * Math.cos( 2.0 * Math.PI * Math.random() ))+1.05)*doc.price,0.01);
+                doc.price = getSkewedRandomNumber(doc.price)*0.03*doc.price
             }
             return doc;
         });

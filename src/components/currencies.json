@@ -1,61 +1,61 @@
 [
     { 
-        "id": "UNI",
+        "index": "UNI",
         "name": "Universal Currency",
         "symbol": "U"
     },
     {
-        "id": "TRD",
+        "index": "TRD",
         "name": "Terran Dollars",
         "symbol": "$"
     },
     {
-        "id": "MSB",
+        "index": "MSB",
         "name": "Mars Bars",
         "symbol": "♂"
     },
     {
-        "id": "MCC",
+        "index": "MCC",
         "name": "Mercury Coins",
         "symbol": "☿"
     },
     {
-        "id": "VSV",
+        "index": "VSV",
         "name": "Venus Sunev",
         "symbol": "♀"
     },
     {
-        "id": "SSH",
+        "index": "SSH",
         "name": "Sunshine",
         "symbol": "☉︎"
     },
     {
-        "id": "MNL",
+        "index": "MNL",
         "name": "Moonlight",
         "symbol": "☾"
     },
     {
-        "id": "JVJ",
+        "index": "JVJ",
         "name": "Jovian Jots",
         "symbol": "♃"
     },
     {
-        "id": "STR",
+        "index": "STR",
         "name": "Saturnian Rings",
         "symbol": "♄"
     },
     {
-        "id": "URH",
+        "index": "URH",
         "name": "Uranian Herschels",
         "symbol": "♅"
     },
     {
-        "id": "NPT",
-        "name": "Neptunian Tridents",
+        "index": "NPT",
+        "name": "Neptunian Trindexents",
         "symbol": "♆"
     },
     {
-        "id": "PLP",
+        "index": "PLP",
         "name": "Plutonian Planks",
         "symbol": "♇"
     }
